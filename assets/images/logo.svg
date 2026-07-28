@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="tlGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#00a6ff"/>
+    </linearGradient>
+    <linearGradient id="trGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#9333ea"/>
+    </linearGradient>
+    <clipPath id="iconSquircle">
+      <rect x="0" y="0" width="512" height="512" rx="112" ry="112"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#iconSquircle)">
+    <!-- Quadrants -->
+    <rect x="0" y="0" width="250" height="250" fill="url(#tlGrad)"/>
+    <rect x="262" y="0" width="250" height="250" fill="url(#trGrad)"/>
+    <rect x="0" y="262" width="250" height="250" fill="#0052ff"/>
+    <rect x="262" y="262" width="250" height="250" fill="#581c87"/>
+
+    <!-- Quadrant Grid Dividers -->
+    <line x1="256" y1="0" x2="256" y2="512" stroke="#ffffff" stroke-width="12"/>
+    <line x1="0" y1="256" x2="512" y2="256" stroke="#ffffff" stroke-width="12"/>
+
+    <!-- Center Play Triangle (Smooth rounded corners) -->
+    <path d="M 200 176 C 200 167 210 161 218 166 L 338 246 C 345 251 345 261 338 266 L 218 346 C 210 351 200 345 200 336 Z" fill="#ffffff"/>
+  </g>
+</svg>

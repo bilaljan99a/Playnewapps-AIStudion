@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="44" fill="#111111"/>
+  <path d="M100 35 L160 60 V110 C160 145 100 170 100 170 C100 170 40 145 40 110 V60 Z" fill="#222222" stroke="#f1c40f" stroke-width="6"/>
+  <text x="100" y="115" font-family="'Impact', 'Arial Black', sans-serif" font-size="42" font-weight="bold" fill="#f1c40f" text-anchor="middle">COD</text>
+  <text x="100" y="138" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="2" text-anchor="middle">MOBILE</text>
+</svg>

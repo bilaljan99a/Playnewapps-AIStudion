@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="procGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3023ae"/>
+      <stop offset="30%" stop-color="#c86dd7"/>
+      <stop offset="70%" stop-color="#ff007f"/>
+      <stop offset="100%" stop-color="#ffaa00"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="44" fill="#121212"/>
+  <path d="M40 160 C70 120 80 140 110 90 C130 55 140 40 165 35 C160 60 140 80 115 110 C85 145 70 140 40 160 Z" fill="url(#procGrad)"/>
+</svg>
