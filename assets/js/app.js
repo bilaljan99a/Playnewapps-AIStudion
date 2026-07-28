@@ -448,6 +448,13 @@ class App {
             }).join('');
         }
 
+        const dynamicBody = document.getElementById('dynamic-review-body');
+        if (dynamicBody && review.contentHtml) {
+            dynamicBody.innerHTML = review.contentHtml;
+        } else if (dynamicBody) {
+            dynamicBody.style.display = 'none';
+        }
+
         this.renderRelatedContent(review);
     }
 
