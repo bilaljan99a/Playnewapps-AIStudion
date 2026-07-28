@@ -3400,4 +3400,35 @@ img, video, iframe, object, embed {
     }
 }
 
+/* ==========================================================================
+   Desktop Coupon Cards Layout Fix (min-width: 992px)
+   ========================================================================== */
+@media (min-width: 992px) {
+    .affiliate-card {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .coupon-badges {
+        position: absolute;
+        top: 0.85rem;
+        right: 1.25rem;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        max-width: calc(100% - 2.5rem);
+        z-index: 2;
+    }
+
+    .coupon-header {
+        position: relative;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .coupon-content {
+        padding: 1.5rem;
+    }
+}
+
 
