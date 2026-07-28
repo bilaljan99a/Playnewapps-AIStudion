@@ -706,13 +706,11 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-.coupon-badges {
-    position: absolute;
-    top: -12px;
-    right: 1.5rem;
+.coupon-top-bar {
     display: flex;
-    gap: 0.5rem;
-    z-index: 2;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .badge {
@@ -736,18 +734,24 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
 }
 
-.exclusive-badge {
-    background-color: #f59e0b;
-    color: #fff;
+.discount-badge {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
     box-shadow: var(--shadow-sm);
+    white-space: nowrap;
 }
 
 .coupon-header {
     background-color: rgba(37, 99, 235, 0.05);
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.85rem;
     border-bottom: 1px dashed var(--border-color);
 }
 
@@ -759,29 +763,24 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 1rem;
+    width: 100%;
 }
 
 .store-logo {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--border-color);
     background-color: var(--surface-color);
-}
-
-.discount {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: var(--primary-color);
-    line-height: 1;
+    flex-shrink: 0;
 }
 
 .store-name {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    font-weight: 500;
-    margin-top: 0.25rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
 }
 
 .coupon-content {
@@ -3124,16 +3123,7 @@ img, video, iframe, object, embed {
 
     .coupon-header {
         padding: 1rem;
-        flex-direction: column;
-        align-items: flex-start;
         gap: 0.75rem;
-        position: relative;
-    }
-
-    .coupon-badges {
-        position: static;
-        margin-bottom: 0.25rem;
-        flex-wrap: wrap;
     }
 
     .store-info {
@@ -3142,12 +3132,8 @@ img, video, iframe, object, embed {
     }
 
     .store-logo {
-        width: 44px;
-        height: 44px;
-    }
-
-    .discount {
-        font-size: 1.3rem;
+        width: 42px;
+        height: 42px;
     }
 
     .coupon-content {
@@ -3401,34 +3387,10 @@ img, video, iframe, object, embed {
 }
 
 /* ==========================================================================
-   Desktop Coupon Cards Layout Fix (min-width: 992px)
+   Coupon Cards Layout Enhancements
    ========================================================================== */
-@media (min-width: 992px) {
-    .affiliate-card {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .coupon-badges {
-        position: absolute;
-        top: 0.85rem;
-        right: 1.25rem;
-        display: flex;
-        gap: 0.5rem;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        max-width: calc(100% - 2.5rem);
-        z-index: 2;
-    }
-
-    .coupon-header {
-        position: relative;
-        padding: 1.25rem 1.5rem;
-    }
-
-    .coupon-content {
-        padding: 1.5rem;
-    }
+.affiliate-card {
+    overflow: hidden;
 }
 
 

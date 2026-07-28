@@ -65,22 +65,6 @@ class Components {
     }
 
     static createCouponCard(item) {
-        const badgesHtml = (item.badges || []).map(b => {
-            const isVerified = b.toLowerCase() === 'verified';
-            const bLower = b.toLowerCase();
-            let badgeClass = 'exclusive-badge';
-            if (bLower.includes('verified')) badgeClass = 'verified-badge';
-            if (bLower.includes('exclusive')) badgeClass = 'editor-choice';
-            if (bLower.includes('limited')) badgeClass = 'expired-badge'; // Reusing some CSS or add new
-
-            let icon = '';
-            if (bLower.includes('verified')) icon = 'verified';
-            else if (bLower.includes('exclusive')) icon = 'stars';
-            else if (bLower.includes('limited')) icon = 'timer';
-
-            return `<span class="badge ${badgeClass}">${icon ? `<span class="material-icons-round" aria-hidden="true">${icon}</span> ` : ''}${b}</span>`;
-        }).join('');
-
         let actionHtml = '';
         if (item.code) {
             const masked = item.code.substring(0, 4) + '••••';
@@ -95,17 +79,20 @@ class Components {
         
         const successRate = item.successPercentage ? `${item.successPercentage}%` : item.successRate;
         const votes = item.votesCount ? `(${item.votesCount} votes)` : '';
+        const isExpired = item.status === 'expired';
 
         return `
-            <article class="card coupon-card affiliate-card ${item.status === 'expired' ? 'opacity-60' : ''}">
-                <div class="coupon-badges">${badgesHtml}</div>
+            <article class="card coupon-card affiliate-card ${isExpired ? 'opacity-60' : ''}">
                 <div class="coupon-header">
+                    <div class="coupon-top-bar">
+                        <span class="badge ${isExpired ? 'expired-badge' : 'verified-badge'}">
+                            <span class="material-icons-round" aria-hidden="true">${isExpired ? 'event_busy' : 'verified'}</span> ${isExpired ? 'Expired' : 'Verified'}
+                        </span>
+                        ${item.discount ? `<span class="badge discount-badge">${item.discount}</span>` : ''}
+                    </div>
                     <div class="store-info">
                         <img src="${item.store.logo}" alt="${item.store.name} Logo" class="store-logo" width="50" height="50" loading="lazy">
-                        <div>
-                            <div class="discount" aria-label="${item.discount}">${item.discount}</div>
-                            <div class="store-name">${item.store.name}</div>
-                        </div>
+                        <div class="store-name">${item.store.name}</div>
                     </div>
                 </div>
                 <div class="coupon-content">
