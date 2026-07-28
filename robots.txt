@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.playnewapps.com/sitemap.xml
+Sitemap: https://playnewapps.store/sitemap.xml
