@@ -3,19 +3,19 @@
         "id": "nordvpn",
         "name": "NordVPN",
         "icon": "vpn_key",
-        "logo": "https://placehold.co/150x150/009688/ffffff?text=Nord",
-        "about": "NordVPN is a personal virtual private network service provider. It has desktop applications for Windows, macOS, and Linux, mobile apps for Android and iOS, as well as an application for Android TV. Connect to one of their 5,000+ servers in 60 countries and enjoy fast, secure, and private internet access.",
+        "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f766e'/><path d='M50 22 L75 35 V55 C75 70 50 80 50 80 C50 80 25 70 25 55 V35 Z' fill='%23ffffff' opacity='0.2'/><path d='M50 28 L70 38 V53 C70 65 50 73 50 73 C50 73 30 65 30 53 V38 Z' fill='%23ffffff'/><path d='M50 38 L62 60 L52 60 L50 50 L48 60 L38 60 Z' fill='%230f766e'/></svg>",
+        "about": "NordVPN is a leading security and privacy solution provider trusted by millions worldwide. Offering high-speed double encryption, strict no-logs policy, malware protection, and over 6,000 servers across 110+ countries.",
         "rating": 4.8,
         "votes": 1245,
-        "related": ["expressvpn", "surfshark", "cyberghost"],
+        "related": ["grammarly", "hostinger", "adobe"],
         "faqs": [
             {
                 "question": "Does NordVPN have a free trial?",
-                "answer": "NordVPN doesn't offer a free trial, but they do have a 30-day money-back guarantee, allowing you to try their service risk-free."
+                "answer": "NordVPN offers a risk-free 30-day money-back guarantee, allowing you to test all premium features with complete protection."
             },
             {
                 "question": "How many devices can I connect simultaneously?",
-                "answer": "A single NordVPN subscription covers up to 6 devices simultaneously."
+                "answer": "A single NordVPN account supports up to 10 devices connected at the same time across Windows, macOS, Android, iOS, and Linux."
             }
         ]
     },
@@ -23,15 +23,15 @@
         "id": "grammarly",
         "name": "Grammarly",
         "icon": "spellcheck",
-        "logo": "https://placehold.co/150x150/10b981/ffffff?text=Grammarly",
-        "about": "Grammarly is a cloud-based typing assistant that reviews spelling, grammar, punctuation, clarity, engagement, and delivery mistakes. It uses AI to identify and search for an appropriate replacement for the mistake it locates.",
+        "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2310b981'/><circle cx='50' cy='50' r='30' fill='none' stroke='%23ffffff' stroke-width='8'/><path d='M40 50 L48 58 L62 42' stroke='%23ffffff' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>",
+        "about": "Grammarly is an AI-powered communication assistant that enhances writing clarity, tone, precision, and correctness across web browsers, desktop applications, and mobile devices.",
         "rating": 4.9,
         "votes": 3420,
         "related": ["adobe", "canva", "envato"],
         "faqs": [
             {
                 "question": "Is Grammarly Premium worth it?",
-                "answer": "Yes, if you write frequently for work, school, or personal projects, the advanced suggestions and plagiarism checker in Premium are highly valuable."
+                "answer": "Yes, Premium unlocks tone adjustments, full sentence rewrites, plagiarism detection, and advanced style improvements essential for professional writing."
             }
         ]
     },
@@ -39,15 +39,15 @@
         "id": "hostinger",
         "name": "Hostinger",
         "icon": "dns",
-        "logo": "https://placehold.co/150x150/673ab7/ffffff?text=Hostinger",
-        "about": "Hostinger is a web hosting provider and internet domain registrar. Established in 2004, Hostinger now has over 29 million users, collectively with its subsidiaries in 178 countries.",
+        "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23673ab7'/><rect x='25' y='28' width='50' height='18' rx='4' fill='%23ffffff'/><rect x='25' y='54' width='50' height='18' rx='4' fill='%23ffffff'/><circle cx='33' cy='37' r='3' fill='%2310b981'/><circle cx='33' cy='63' r='3' fill='%2310b981'/></svg>",
+        "about": "Hostinger is an industry-leading web hosting and cloud server provider servicing over 29 million creators and businesses globally with NVMe storage, 99.9% uptime, and 24/7 live support.",
         "rating": 4.7,
         "votes": 2100,
-        "related": ["bluehost", "siteground"],
+        "related": ["nordvpn", "adobe"],
         "faqs": [
             {
                 "question": "Does Hostinger offer a free domain?",
-                "answer": "Yes, Hostinger offers a free domain for the first year with their Premium, Business, and Cloud hosting plans."
+                "answer": "Yes, Hostinger includes a free custom domain name for the first year with Premium, Business, and Cloud hosting packages."
             }
         ]
     },
@@ -55,15 +55,15 @@
         "id": "adobe",
         "name": "Adobe",
         "icon": "brush",
-        "logo": "https://placehold.co/150x150/e91e63/ffffff?text=Adobe",
-        "about": "Adobe is an American multinational computer software company. It has historically focused upon the creation of multimedia and creativity software products.",
+        "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23e11d48'/><path d='M25 75 L42 25 L55 25 L35 75 Z M75 75 L58 25 L45 25 L65 75 Z M38 58 L62 58 L58 66 L34 66 Z' fill='%23ffffff'/></svg>",
+        "about": "Adobe Creative Cloud is the global benchmark for creative software, offering world-standard creative desktop and mobile apps including Photoshop, Illustrator, Premiere Pro, and After Effects.",
         "rating": 4.6,
         "votes": 5300,
         "related": ["canva", "envato", "grammarly"],
         "faqs": [
             {
-                "question": "Can I get Adobe software for free?",
-                "answer": "Adobe offers free trials for most of its software, but ongoing use requires a Creative Cloud subscription."
+                "question": "Can I get Adobe Creative Cloud discounts?",
+                "answer": "Yes, verified students and teachers get up to 60% off standard Creative Cloud plan pricing, and business volume licenses offer significant savings."
             }
         ]
     },
@@ -71,15 +71,15 @@
         "id": "canva",
         "name": "Canva",
         "icon": "palette",
-        "logo": "https://placehold.co/150x150/00bcd4/ffffff?text=Canva",
-        "about": "Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more.",
+        "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2306b6d4'/><path d='M50 25 C30 25 25 40 25 55 C25 70 38 75 50 75 C65 75 75 62 75 50 C75 35 62 25 50 25 Z M50 63 C40 63 35 57 35 50 C35 43 42 35 50 35 C58 35 63 42 63 50 C63 57 58 63 50 63 Z' fill='%23ffffff'/></svg>",
+        "about": "Canva is an intuitive online visual design suite enabling team collaboration, graphic design, social media assets, presentations, brand kits, and video editing without requiring prior design experience.",
         "rating": 4.8,
         "votes": 4150,
         "related": ["adobe", "envato", "grammarly"],
         "faqs": [
             {
-                "question": "Is Canva Pro free for students?",
-                "answer": "Canva offers a free version for everyone, and Canva for Education is free for K-12 teachers and their students."
+                "question": "Is Canva Pro free to test?",
+                "answer": "Yes, new users can start a 30-day full feature trial of Canva Pro to test premium brand kits, background removers, and premium stock assets."
             }
         ]
     },
@@ -87,15 +87,15 @@
         "id": "envato",
         "name": "Envato",
         "icon": "storefront",
-        "logo": "https://placehold.co/150x150/8bc34a/ffffff?text=Envato",
-        "about": "Envato is the world's leading community for creative assets, tools and talent. Millions of people around the world choose our marketplace, studio and courses to buy files, hire freelancers, or learn the skills needed to build websites, videos, apps, graphics and more.",
+        "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2384cc16'/><path d='M30 70 C30 30 70 25 70 25 C70 25 75 65 35 75 C32 75 30 73 30 70 Z' fill='%23ffffff'/></svg>",
+        "about": "Envato is a digital asset marketplace providing millions of creative templates, stock video clips, web themes, royalty-free music tracks, 3D renders, and graphics for developers and creators.",
         "rating": 4.5,
         "votes": 1890,
         "related": ["adobe", "canva"],
         "faqs": [
             {
-                "question": "What is Envato Elements?",
-                "answer": "Envato Elements is a subscription service providing unlimited downloads of millions of creative assets like graphics, video templates, audio, and fonts."
+                "question": "What does Envato Elements subscription include?",
+                "answer": "Envato Elements offers unlimited commercial-license downloads of over 15 million creative assets under a single monthly or yearly subscription."
             }
         ]
     }

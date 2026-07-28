@@ -1,13 +1,13 @@
 [
     {
         "id": "alex-tech",
-        "name": "Alex Tech",
-        "role": "Senior Editor",
-        "bio": "Alex has been reviewing apps and hardware for over 8 years, with a focus on creative professional tools and workflows.",
-        "image": "https://placehold.co/100x100/10b981/fff?text=AT",
+        "name": "Alex Taylor",
+        "role": "Senior Technology Editor",
+        "bio": "Alex Taylor has tested and evaluated mobile apps, video production suites, and security software for over 8 years. He specializes in iOS and Android creative tools.",
+        "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80",
         "social": {
-            "twitter": "#",
-            "website": "#"
+            "twitter": "https://twitter.com/playnewapps",
+            "website": "https://playnewapps.store"
         }
     }
 ]

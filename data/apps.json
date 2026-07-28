@@ -2,8 +2,8 @@
     {
         "id": "lumafusion-pro",
         "title": "LumaFusion Pro",
-        "description": "The ultimate mobile video editor for professionals. Desktop-grade editing on your tablet or phone.",
-        "icon": "https://placehold.co/150x150/2196f3/ffffff?text=Luma",
+        "description": "The ultimate mobile video editor for professionals. Desktop-grade multi-track editing on iPad, iPhone, and Android.",
+        "icon": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232563eb'/><path d='M30 35 L70 35 L70 65 L30 65 Z M38 28 L46 35 M54 28 L62 35' stroke='%23ffffff' stroke-width='4' fill='none' stroke-linecap='round'/><polygon points='45,43 60,50 45,57' fill='%23ffffff'/></svg>",
         "rating": 4.8,
         "categoryId": "video-editors",
         "developer": "Luma Touch LLC",
@@ -14,93 +14,92 @@
             "Android",
             "ChromeOS"
         ],
-        "license": "Premium ($29.99)",
-        "updatedAt": "2023-10-24",
+        "license": "One-time Purchase ($29.99)",
+        "updatedAt": "2024-05-15",
         "badges": [
             "Verified Review",
             "Editor's Choice"
         ],
         "isFeatured": true,
         "isTrending": true,
-        "summary": "LumaFusion Pro continues to bridge the gap between desktop and mobile video editing. With its intuitive multi-track timeline, robust color correction, and magnetic timeline features, it remains the gold standard for iPad and iPhone creators.",
+        "summary": "LumaFusion Pro bridges the gap between mobile flexibility and professional NLE software. With multi-track magnetic timelines, robust 3D color correction, keyframe animation, and speed ramping, it remains the industry standard for content creators.",
         "pros": [
-            "Up to 6 video/audio tracks for complex editing",
-            "Magnetic timeline is highly intuitive for touch",
-            "Excellent color correction and LUT support",
-            "One-time purchase (no subscription required)",
-            "Direct export to YouTube and Vimeo"
+            "Up to 6 video/audio tracks for complex timeline editing",
+            "Intuitive magnetic timeline optimized for touch controls",
+            "Advanced 3D color grading with custom LUT import",
+            "One-time purchase without recurring subscription fees",
+            "Seamless direct export to YouTube, Vimeo, and cloud storage"
         ],
         "cons": [
-            "Steep learning curve for absolute beginners",
-            "Android version still lacks parity with iOS",
-            "UI can feel cramped on smaller smartphones",
-            "Storyblocks integration requires a subscription"
+            "Learning curve for complete video editing novices",
+            "Android version features catch up slightly behind iOS updates",
+            "Stock footage library requires optional Storyblocks add-on"
         ],
         "ratingBreakdown": {
-            "easeOfUse": 4,
-            "features": 5,
-            "design": 4.5,
-            "performance": 4.8,
-            "value": 5
+            "easeOfUse": 4.2,
+            "features": 5.0,
+            "design": 4.7,
+            "performance": 4.9,
+            "value": 4.8
         },
         "downloads": [
             {
                 "storeId": "apple",
-                "url": "https://example.com/appstore"
+                "url": "https://apps.apple.com/app/lumafusion/id1062022008"
             },
             {
                 "storeId": "google",
-                "url": "https://example.com/playstore"
+                "url": "https://play.google.com/store/apps/details?id=com.lumatouch.lumafusion"
             },
             {
                 "storeId": "official",
-                "url": "https://example.com/official"
+                "url": "https://lumatouch.com/lumafusion-app/"
             }
         ],
         "screenshots": [
             {
-                "url": "https://placehold.co/800x600/333/fff?text=Timeline",
-                "thumbnail": "https://placehold.co/800x600/333/fff?text=Timeline.webp",
-                "alt": "Multi-track Timeline View"
+                "url": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&auto=format&fit=crop&q=80",
+                "thumbnail": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&auto=format&fit=crop&q=80",
+                "alt": "Multi-track Timeline Editing View"
             },
             {
-                "url": "https://placehold.co/800x600/444/fff?text=Color+Grading",
-                "thumbnail": "https://placehold.co/800x600/444/fff?text=Color+Grading.webp",
-                "alt": "Advanced Color Correction"
+                "url": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&auto=format&fit=crop&q=80",
+                "thumbnail": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&auto=format&fit=crop&q=80",
+                "alt": "Advanced Color Correction Suite"
             },
             {
-                "url": "https://placehold.co/800x600/555/fff?text=Export+Menu",
-                "thumbnail": "https://placehold.co/800x600/555/fff?text=Export+Menu.webp",
-                "alt": "Export Settings"
+                "url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+                "thumbnail": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+                "alt": "High-Resolution Export Options"
             }
         ],
         "video": {
-            "thumbnail": "https://placehold.co/1280x720/1a1a1a/fff?text=Watch+Review"
+            "thumbnail": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1280&auto=format&fit=crop&q=80"
         },
         "authorId": "alex-tech",
         "tags": [
             "video editing",
             "pro tools",
-            "creative"
+            "content creation"
         ],
         "affiliateLinks": [
             {
-                "label": "Best Price ($19.99)",
-                "url": "https://example.com/best-price",
+                "label": "Official LumaTouch Deal",
+                "url": "https://lumatouch.com/lumafusion-app/",
                 "isPrimary": true,
                 "type": "best-price",
                 "icon": "shopping_cart"
             },
             {
-                "label": "Get Deal on App Store",
-                "url": "https://example.com/appstore",
+                "label": "Get on Apple App Store",
+                "url": "https://apps.apple.com/app/lumafusion/id1062022008",
                 "isPrimary": false,
                 "type": "appstore",
                 "icon": "apple"
             },
             {
-                "label": "Official Website",
-                "url": "https://example.com/official",
+                "label": "Get on Google Play",
+                "url": "https://play.google.com/store/apps/details?id=com.lumatouch.lumafusion",
                 "isPrimary": false,
                 "type": "official",
                 "icon": "language"
@@ -109,80 +108,152 @@
         "priceComparison": [
             {
                 "store": "Official Store",
-                "price": "$19.99",
-                "url": "https://example.com/official-sale",
+                "price": "$29.99",
+                "url": "https://lumatouch.com/lumafusion-app/",
                 "isBest": true,
-                "badge": "Save 33%"
-            },
-            {
-                "store": "Amazon",
-                "price": "$24.99",
-                "url": "https://example.com/amazon",
-                "isBest": false,
-                "badge": ""
+                "badge": "Standard License"
             },
             {
                 "store": "Apple App Store",
                 "price": "$29.99",
-                "url": "https://example.com/appstore",
+                "url": "https://apps.apple.com/app/lumafusion/id1062022008",
+                "isBest": false,
+                "badge": ""
+            },
+            {
+                "store": "Google Play Store",
+                "price": "$29.99",
+                "url": "https://play.google.com/store/apps/details?id=com.lumatouch.lumafusion",
                 "isBest": false,
                 "badge": ""
             }
         ],
         "trustScore": 98,
         "communityRating": 4.9,
-        "editorRecommendation": "LumaFusion Pro is the undisputed king of mobile video editing. If you are serious about content creation on an iPad, this is the first app you should buy. Our tests show it handles 4K footage better than any competitor.",
+        "editorRecommendation": "LumaFusion Pro is the premier mobile video editor available today. If you perform serious video production or mobile filmmaking, it is worth every penny.",
         "relatedGuides": [
             {
-                "title": "Best Video Editors for iPad in 2024",
-                "url": "#"
+                "title": "Best Video Editors for iPad & Android in 2024",
+                "url": "/category.html?id=video-editors"
             },
             {
-                "title": "Top 10 Apps for YouTubers",
-                "url": "#"
+                "title": "Top Mobile Content Creation Apps",
+                "url": "/category.html?id=video-editors"
             }
         ]
     },
     {
         "id": "capcut-pro",
         "title": "CapCut Pro",
-        "description": "Best for TikTok and quick social media edits.",
-        "icon": "https://placehold.co/100x100/e91e63/fff?text=CC",
+        "description": "All-in-one video editing solution tailored for TikTok, Shorts, Reels, and rapid viral content creation.",
+        "icon": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23db2777'/><path d='M30 30 L70 70 M30 70 L70 30' stroke='%23ffffff' stroke-width='8' stroke-linecap='round'/><circle cx='30' cy='30' r='8' fill='%23db2777' stroke='%23ffffff' stroke-width='4'/><circle cx='30' cy='70' r='8' fill='%23db2777' stroke='%23ffffff' stroke-width='4'/></svg>",
         "rating": 4.6,
         "categoryId": "video-editors",
+        "developer": "Bytedance Pte. Ltd.",
+        "version": "10.4.0",
+        "size": "142 MB",
+        "platforms": [
+            "iOS",
+            "Android",
+            "PC"
+        ],
+        "license": "Freemium ($7.99/mo Pro)",
+        "updatedAt": "2024-06-01",
+        "badges": [
+            "Trending",
+            "Popular"
+        ],
         "isFeatured": false,
         "isTrending": true,
+        "summary": "CapCut Pro offers auto-captions, background removal, trending transition presets, and AI enhancement tools that drastically reduce editing time for short-form social video.",
+        "pros": [
+            "Automated AI captions with dynamic styling",
+            "One-click background removal and body effects",
+            "Massive library of royalty-free sound effects and templates"
+        ],
+        "cons": [
+            "Some high-tier features require Pro subscription",
+            "Cloud backup storage limits on free plan"
+        ],
+        "authorId": "alex-tech",
         "tags": [
             "social media",
-            "quick edits"
+            "quick edits",
+            "ai tools"
         ]
     },
     {
         "id": "kinemaster",
         "title": "KineMaster",
-        "description": "Powerful layer-based editing with a subscription model.",
-        "icon": "https://placehold.co/100x100/ff9800/fff?text=KM",
+        "description": "Powerful layer-based video editing software with high precision audio mixing and chromakey tools.",
+        "icon": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23f97316'/><circle cx='50' cy='50' r='28' fill='%23ffffff'/><circle cx='50' cy='50' r='10' fill='%23f97316'/><circle cx='50' cy='30' r='5' fill='%23f97316'/><circle cx='50' cy='70' r='5' fill='%23f97316'/><circle cx='30' cy='50' r='5' fill='%23f97316'/><circle cx='70' cy='50' r='5' fill='%23f97316'/></svg>",
         "rating": 4.4,
         "categoryId": "video-editors",
+        "developer": "KineMaster Corporation",
+        "version": "7.2.0",
+        "size": "110 MB",
+        "platforms": [
+            "Android",
+            "iOS"
+        ],
+        "license": "Subscription ($4.99/mo)",
+        "updatedAt": "2024-04-10",
+        "badges": [
+            "Verified"
+        ],
         "isFeatured": false,
         "isTrending": false,
+        "summary": "KineMaster delivers accurate frame-by-frame trimming, multi-layer video blending, and instant preview capabilities.",
+        "pros": [
+            "Chroma key green screen support",
+            "Extensive Asset Store for music and stickers",
+            "Frame-by-frame precision editing"
+        ],
+        "cons": [
+            "Watermark present on free version exports"
+        ],
+        "authorId": "alex-tech",
         "tags": [
             "layer editing",
+            "chromakey",
             "mobile tools"
         ]
     },
     {
         "id": "procreate",
         "title": "Procreate Pocket",
-        "description": "Professional digital painting and illustration app designed for iPhone.",
-        "icon": "https://placehold.co/150x150/9c27b0/fff?text=PC",
+        "description": "Professional digital painting and illustration suite optimized specifically for mobile touch screens.",
+        "icon": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%238b5cf6'/><path d='M30 70 Q50 30 75 25 C75 25 70 50 30 70 Z' fill='%23ffffff'/><circle cx='28' cy='72' r='6' fill='%23f43f5e'/></svg>",
         "rating": 4.9,
         "categoryId": "design",
+        "developer": "Savage Interactive Pty Ltd",
+        "version": "4.0.8",
+        "size": "290 MB",
+        "platforms": [
+            "iOS"
+        ],
+        "license": "One-time Purchase ($5.99)",
+        "updatedAt": "2024-05-20",
+        "badges": [
+            "Editor's Choice",
+            "Top Rated"
+        ],
         "isFeatured": true,
         "isTrending": false,
+        "summary": "Procreate Pocket packs desktop power into an intuitive mobile canvas, featuring over 200 custom brushes, Valkyrie graphics engine, and 4K canvas capabilities.",
+        "pros": [
+            "Ultra-responsive 60fps painting engine",
+            "Custom brush studio and pressure sensitivity",
+            "Full time-lapse recording of artwork"
+        ],
+        "cons": [
+            "Exclusive to iOS devices"
+        ],
+        "authorId": "alex-tech",
         "tags": [
             "drawing",
-            "art"
+            "digital art",
+            "illustration"
         ]
     }
 ]
