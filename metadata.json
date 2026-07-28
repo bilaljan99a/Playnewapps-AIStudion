@@ -1,0 +1,6 @@
+{
+  "name": "PlayNewApps",
+  "description": "Premium App & Software Reviews, Deals, and Buying Guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

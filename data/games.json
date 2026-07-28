@@ -1,0 +1,24 @@
+[
+    {
+        "id": "genshin-impact",
+        "title": "Genshin Impact",
+        "description": "Open-world action RPG with stunning visuals and gacha mechanics.",
+        "icon": "https://placehold.co/150x150/673ab7/ffffff?text=GI",
+        "rating": 4.7,
+        "categoryId": "rpg",
+        "isFeatured": true,
+        "isLatest": true,
+        "tags": ["open world", "anime"]
+    },
+    {
+        "id": "cod-mobile",
+        "title": "Call of Duty: Mobile",
+        "description": "Classic multiplayer and battle royale modes on your phone.",
+        "icon": "https://placehold.co/150x150/212121/ffffff?text=COD",
+        "rating": 4.5,
+        "categoryId": "action",
+        "isFeatured": false,
+        "isLatest": true,
+        "tags": ["fps", "shooter"]
+    }
+]

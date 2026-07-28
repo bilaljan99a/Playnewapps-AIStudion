@@ -1,0 +1,188 @@
+[
+    {
+        "id": "lumafusion-pro",
+        "title": "LumaFusion Pro",
+        "description": "The ultimate mobile video editor for professionals. Desktop-grade editing on your tablet or phone.",
+        "icon": "https://placehold.co/150x150/2196f3/ffffff?text=Luma",
+        "rating": 4.8,
+        "categoryId": "video-editors",
+        "developer": "Luma Touch LLC",
+        "version": "4.1.1",
+        "size": "185 MB",
+        "platforms": [
+            "iOS",
+            "Android",
+            "ChromeOS"
+        ],
+        "license": "Premium ($29.99)",
+        "updatedAt": "2023-10-24",
+        "badges": [
+            "Verified Review",
+            "Editor's Choice"
+        ],
+        "isFeatured": true,
+        "isTrending": true,
+        "summary": "LumaFusion Pro continues to bridge the gap between desktop and mobile video editing. With its intuitive multi-track timeline, robust color correction, and magnetic timeline features, it remains the gold standard for iPad and iPhone creators.",
+        "pros": [
+            "Up to 6 video/audio tracks for complex editing",
+            "Magnetic timeline is highly intuitive for touch",
+            "Excellent color correction and LUT support",
+            "One-time purchase (no subscription required)",
+            "Direct export to YouTube and Vimeo"
+        ],
+        "cons": [
+            "Steep learning curve for absolute beginners",
+            "Android version still lacks parity with iOS",
+            "UI can feel cramped on smaller smartphones",
+            "Storyblocks integration requires a subscription"
+        ],
+        "ratingBreakdown": {
+            "easeOfUse": 4,
+            "features": 5,
+            "design": 4.5,
+            "performance": 4.8,
+            "value": 5
+        },
+        "downloads": [
+            {
+                "storeId": "apple",
+                "url": "https://example.com/appstore"
+            },
+            {
+                "storeId": "google",
+                "url": "https://example.com/playstore"
+            },
+            {
+                "storeId": "official",
+                "url": "https://example.com/official"
+            }
+        ],
+        "screenshots": [
+            {
+                "url": "https://placehold.co/800x600/333/fff?text=Timeline",
+                "thumbnail": "https://placehold.co/800x600/333/fff?text=Timeline.webp",
+                "alt": "Multi-track Timeline View"
+            },
+            {
+                "url": "https://placehold.co/800x600/444/fff?text=Color+Grading",
+                "thumbnail": "https://placehold.co/800x600/444/fff?text=Color+Grading.webp",
+                "alt": "Advanced Color Correction"
+            },
+            {
+                "url": "https://placehold.co/800x600/555/fff?text=Export+Menu",
+                "thumbnail": "https://placehold.co/800x600/555/fff?text=Export+Menu.webp",
+                "alt": "Export Settings"
+            }
+        ],
+        "video": {
+            "thumbnail": "https://placehold.co/1280x720/1a1a1a/fff?text=Watch+Review"
+        },
+        "authorId": "alex-tech",
+        "tags": [
+            "video editing",
+            "pro tools",
+            "creative"
+        ],
+        "affiliateLinks": [
+            {
+                "label": "Best Price ($19.99)",
+                "url": "https://example.com/best-price",
+                "isPrimary": true,
+                "type": "best-price",
+                "icon": "shopping_cart"
+            },
+            {
+                "label": "Get Deal on App Store",
+                "url": "https://example.com/appstore",
+                "isPrimary": false,
+                "type": "appstore",
+                "icon": "apple"
+            },
+            {
+                "label": "Official Website",
+                "url": "https://example.com/official",
+                "isPrimary": false,
+                "type": "official",
+                "icon": "language"
+            }
+        ],
+        "priceComparison": [
+            {
+                "store": "Official Store",
+                "price": "$19.99",
+                "url": "https://example.com/official-sale",
+                "isBest": true,
+                "badge": "Save 33%"
+            },
+            {
+                "store": "Amazon",
+                "price": "$24.99",
+                "url": "https://example.com/amazon",
+                "isBest": false,
+                "badge": ""
+            },
+            {
+                "store": "Apple App Store",
+                "price": "$29.99",
+                "url": "https://example.com/appstore",
+                "isBest": false,
+                "badge": ""
+            }
+        ],
+        "trustScore": 98,
+        "communityRating": 4.9,
+        "editorRecommendation": "LumaFusion Pro is the undisputed king of mobile video editing. If you are serious about content creation on an iPad, this is the first app you should buy. Our tests show it handles 4K footage better than any competitor.",
+        "relatedGuides": [
+            {
+                "title": "Best Video Editors for iPad in 2024",
+                "url": "#"
+            },
+            {
+                "title": "Top 10 Apps for YouTubers",
+                "url": "#"
+            }
+        ]
+    },
+    {
+        "id": "capcut-pro",
+        "title": "CapCut Pro",
+        "description": "Best for TikTok and quick social media edits.",
+        "icon": "https://placehold.co/100x100/e91e63/fff?text=CC",
+        "rating": 4.6,
+        "categoryId": "video-editors",
+        "isFeatured": false,
+        "isTrending": true,
+        "tags": [
+            "social media",
+            "quick edits"
+        ]
+    },
+    {
+        "id": "kinemaster",
+        "title": "KineMaster",
+        "description": "Powerful layer-based editing with a subscription model.",
+        "icon": "https://placehold.co/100x100/ff9800/fff?text=KM",
+        "rating": 4.4,
+        "categoryId": "video-editors",
+        "isFeatured": false,
+        "isTrending": false,
+        "tags": [
+            "layer editing",
+            "mobile tools"
+        ]
+    },
+    {
+        "id": "procreate",
+        "title": "Procreate Pocket",
+        "description": "Professional digital painting and illustration app designed for iPhone.",
+        "icon": "https://placehold.co/150x150/9c27b0/fff?text=PC",
+        "rating": 4.9,
+        "categoryId": "design",
+        "isFeatured": true,
+        "isTrending": false,
+        "tags": [
+            "drawing",
+            "art"
+        ]
+    }
+]

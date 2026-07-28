@@ -1,0 +1,12 @@
+[
+    {
+        "id": "nordvpn",
+        "title": "NordVPN",
+        "description": "Secure your connection today with one of the most reliable VPNs.",
+        "icon": "https://placehold.co/150x150/009688/ffffff?text=Nord",
+        "rating": 4.8,
+        "categoryId": "vpn",
+        "isFeatured": true,
+        "tags": ["security", "privacy"]
+    }
+]

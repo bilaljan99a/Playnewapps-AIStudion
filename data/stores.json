@@ -1,0 +1,102 @@
+[
+    {
+        "id": "nordvpn",
+        "name": "NordVPN",
+        "icon": "vpn_key",
+        "logo": "https://placehold.co/150x150/009688/ffffff?text=Nord",
+        "about": "NordVPN is a personal virtual private network service provider. It has desktop applications for Windows, macOS, and Linux, mobile apps for Android and iOS, as well as an application for Android TV. Connect to one of their 5,000+ servers in 60 countries and enjoy fast, secure, and private internet access.",
+        "rating": 4.8,
+        "votes": 1245,
+        "related": ["expressvpn", "surfshark", "cyberghost"],
+        "faqs": [
+            {
+                "question": "Does NordVPN have a free trial?",
+                "answer": "NordVPN doesn't offer a free trial, but they do have a 30-day money-back guarantee, allowing you to try their service risk-free."
+            },
+            {
+                "question": "How many devices can I connect simultaneously?",
+                "answer": "A single NordVPN subscription covers up to 6 devices simultaneously."
+            }
+        ]
+    },
+    {
+        "id": "grammarly",
+        "name": "Grammarly",
+        "icon": "spellcheck",
+        "logo": "https://placehold.co/150x150/10b981/ffffff?text=Grammarly",
+        "about": "Grammarly is a cloud-based typing assistant that reviews spelling, grammar, punctuation, clarity, engagement, and delivery mistakes. It uses AI to identify and search for an appropriate replacement for the mistake it locates.",
+        "rating": 4.9,
+        "votes": 3420,
+        "related": ["adobe", "canva", "envato"],
+        "faqs": [
+            {
+                "question": "Is Grammarly Premium worth it?",
+                "answer": "Yes, if you write frequently for work, school, or personal projects, the advanced suggestions and plagiarism checker in Premium are highly valuable."
+            }
+        ]
+    },
+    {
+        "id": "hostinger",
+        "name": "Hostinger",
+        "icon": "dns",
+        "logo": "https://placehold.co/150x150/673ab7/ffffff?text=Hostinger",
+        "about": "Hostinger is a web hosting provider and internet domain registrar. Established in 2004, Hostinger now has over 29 million users, collectively with its subsidiaries in 178 countries.",
+        "rating": 4.7,
+        "votes": 2100,
+        "related": ["bluehost", "siteground"],
+        "faqs": [
+            {
+                "question": "Does Hostinger offer a free domain?",
+                "answer": "Yes, Hostinger offers a free domain for the first year with their Premium, Business, and Cloud hosting plans."
+            }
+        ]
+    },
+    {
+        "id": "adobe",
+        "name": "Adobe",
+        "icon": "brush",
+        "logo": "https://placehold.co/150x150/e91e63/ffffff?text=Adobe",
+        "about": "Adobe is an American multinational computer software company. It has historically focused upon the creation of multimedia and creativity software products.",
+        "rating": 4.6,
+        "votes": 5300,
+        "related": ["canva", "envato", "grammarly"],
+        "faqs": [
+            {
+                "question": "Can I get Adobe software for free?",
+                "answer": "Adobe offers free trials for most of its software, but ongoing use requires a Creative Cloud subscription."
+            }
+        ]
+    },
+    {
+        "id": "canva",
+        "name": "Canva",
+        "icon": "palette",
+        "logo": "https://placehold.co/150x150/00bcd4/ffffff?text=Canva",
+        "about": "Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more.",
+        "rating": 4.8,
+        "votes": 4150,
+        "related": ["adobe", "envato", "grammarly"],
+        "faqs": [
+            {
+                "question": "Is Canva Pro free for students?",
+                "answer": "Canva offers a free version for everyone, and Canva for Education is free for K-12 teachers and their students."
+            }
+        ]
+    },
+    {
+        "id": "envato",
+        "name": "Envato",
+        "icon": "storefront",
+        "logo": "https://placehold.co/150x150/8bc34a/ffffff?text=Envato",
+        "about": "Envato is the world's leading community for creative assets, tools and talent. Millions of people around the world choose our marketplace, studio and courses to buy files, hire freelancers, or learn the skills needed to build websites, videos, apps, graphics and more.",
+        "rating": 4.5,
+        "votes": 1890,
+        "related": ["adobe", "canva"],
+        "faqs": [
+            {
+                "question": "What is Envato Elements?",
+                "answer": "Envato Elements is a subscription service providing unlimited downloads of millions of creative assets like graphics, video templates, audio, and fonts."
+            }
+        ]
+    }
+]

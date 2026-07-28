@@ -1,0 +1,8 @@
+[
+    { "id": "video-editors", "name": "Video Editors", "icon": "movie", "count": 12 },
+    { "id": "vpn", "name": "VPN Services", "icon": "vpn_key", "count": 8 },
+    { "id": "design", "name": "Design Tools", "icon": "brush", "count": 15 },
+    { "id": "rpg", "name": "Role Playing", "icon": "sports_esports", "count": 24 },
+    { "id": "action", "name": "Action Games", "icon": "sports_martial_arts", "count": 18 },
+    { "id": "productivity", "name": "Productivity", "icon": "check_circle", "count": 30 }
+]

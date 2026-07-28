@@ -1,0 +1,13 @@
+[
+    {
+        "id": "alex-tech",
+        "name": "Alex Tech",
+        "role": "Senior Editor",
+        "bio": "Alex has been reviewing apps and hardware for over 8 years, with a focus on creative professional tools and workflows.",
+        "image": "https://placehold.co/100x100/10b981/fff?text=AT",
+        "social": {
+            "twitter": "#",
+            "website": "#"
+        }
+    }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "playnewapps",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "serve -p 3000 .",
+    "start": "serve -p 3000 .",
+    "build": "echo 'Static site ready'"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}

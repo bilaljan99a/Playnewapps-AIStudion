@@ -1,0 +1,202 @@
+[
+    {
+        "id": "nordvpn-2yr",
+        "title": "68% Off 2-Year Plan + 3 Months Free",
+        "description": "Get an exclusive 68% discount on the NordVPN 2-year plan and receive 3 extra months completely free.",
+        "store": {
+            "id": "nordvpn",
+            "name": "NordVPN",
+            "logo": "https://placehold.co/150x150/009688/ffffff?text=Nord"
+        },
+        "discount": "68% OFF",
+        "badges": [
+            "Verified",
+            "Exclusive",
+            "Limited Time",
+            "Recently Verified"
+        ],
+        "successRate": "99%",
+        "expiry": "Ends in 2 days",
+        "code": "PLAYNEW68",
+        "affiliateLink": "https://example.com/nordvpn",
+        "isTop": true,
+        "status": "active",
+        "votesCount": 1245,
+        "successPercentage": 99
+    },
+    {
+        "id": "nordvpn-1yr",
+        "title": "45% Off 1-Year Plan",
+        "description": "Secure your connection for a year with this 45% discount.",
+        "store": {
+            "id": "nordvpn",
+            "name": "NordVPN",
+            "logo": "https://placehold.co/150x150/009688/ffffff?text=Nord"
+        },
+        "discount": "45% OFF",
+        "badges": [
+            "Verified"
+        ],
+        "successRate": "95%",
+        "expiry": "Ongoing Offer",
+        "affiliateLink": "https://example.com/nordvpn",
+        "isTop": false,
+        "status": "active",
+        "votesCount": 230,
+        "successPercentage": 88
+    },
+    {
+        "id": "nordvpn-expired",
+        "title": "75% Off Black Friday Special",
+        "description": "Huge Black Friday savings on all VPN plans.",
+        "store": {
+            "id": "nordvpn",
+            "name": "NordVPN",
+            "logo": "https://placehold.co/150x150/009688/ffffff?text=Nord"
+        },
+        "discount": "75% OFF",
+        "badges": [
+            "Expired"
+        ],
+        "successRate": "0%",
+        "expiry": "Expired",
+        "code": "BLACKFRIDAY",
+        "affiliateLink": "https://example.com/nordvpn",
+        "isTop": false,
+        "status": "expired",
+        "votesCount": 271,
+        "successPercentage": 89
+    },
+    {
+        "id": "grammarly-premium",
+        "title": "20% Off Grammarly Premium",
+        "description": "Upgrade to Premium and get 20% off your first year or month.",
+        "store": {
+            "id": "grammarly",
+            "name": "Grammarly",
+            "logo": "https://placehold.co/150x150/10b981/ffffff?text=Grammarly"
+        },
+        "discount": "20% OFF",
+        "badges": [
+            "Verified",
+            "Popular"
+        ],
+        "successRate": "100%",
+        "expiry": "Ongoing Offer",
+        "affiliateLink": "https://example.com/grammarly",
+        "isTop": true,
+        "status": "active",
+        "votesCount": 196,
+        "successPercentage": 83
+    },
+    {
+        "id": "grammarly-edu",
+        "title": "50% Off for Students",
+        "description": "Students get 50% off an annual Grammarly Premium subscription.",
+        "store": {
+            "id": "grammarly",
+            "name": "Grammarly",
+            "logo": "https://placehold.co/150x150/10b981/ffffff?text=Grammarly"
+        },
+        "discount": "50% OFF",
+        "badges": [
+            "Verified"
+        ],
+        "successRate": "98%",
+        "expiry": "Ends in 30 days",
+        "code": "EDU50",
+        "affiliateLink": "https://example.com/grammarly",
+        "isTop": false,
+        "status": "active",
+        "votesCount": 517,
+        "successPercentage": 80
+    },
+    {
+        "id": "hostinger-hosting",
+        "title": "Up to 75% Off Web Hosting + Free Domain",
+        "description": "Start your website with reliable hosting at a massive discount.",
+        "store": {
+            "id": "hostinger",
+            "name": "Hostinger",
+            "logo": "https://placehold.co/150x150/673ab7/ffffff?text=Hostinger"
+        },
+        "discount": "75% OFF",
+        "badges": [
+            "Verified",
+            "Exclusive"
+        ],
+        "successRate": "99%",
+        "expiry": "Ends soon",
+        "code": "PLAYNEWHOST",
+        "affiliateLink": "https://example.com/hostinger",
+        "isTop": true,
+        "status": "active",
+        "votesCount": 451,
+        "successPercentage": 90
+    },
+    {
+        "id": "adobe-cc",
+        "title": "60% Off Creative Cloud for Students & Teachers",
+        "description": "Get all 20+ creative desktop and mobile apps at a huge discount.",
+        "store": {
+            "id": "adobe",
+            "name": "Adobe",
+            "logo": "https://placehold.co/150x150/e91e63/ffffff?text=Adobe"
+        },
+        "discount": "60% OFF",
+        "badges": [
+            "Verified",
+            "Popular"
+        ],
+        "successRate": "100%",
+        "expiry": "Ongoing Offer",
+        "affiliateLink": "https://example.com/adobe",
+        "isTop": true,
+        "status": "active",
+        "votesCount": 542,
+        "successPercentage": 89
+    },
+    {
+        "id": "canva-pro",
+        "title": "Try Canva Pro Free for 30 Days",
+        "description": "Unlock premium tools, templates, and photos with a free trial.",
+        "store": {
+            "id": "canva",
+            "name": "Canva",
+            "logo": "https://placehold.co/150x150/00bcd4/ffffff?text=Canva"
+        },
+        "discount": "FREE TRIAL",
+        "badges": [
+            "Verified"
+        ],
+        "successRate": "100%",
+        "expiry": "Ongoing Offer",
+        "affiliateLink": "https://example.com/canva",
+        "isTop": true,
+        "status": "active",
+        "votesCount": 72,
+        "successPercentage": 82
+    },
+    {
+        "id": "envato-elements",
+        "title": "70% Off First Month of Envato Elements",
+        "description": "Get unlimited downloads of creative assets.",
+        "store": {
+            "id": "envato",
+            "name": "Envato",
+            "logo": "https://placehold.co/150x150/8bc34a/ffffff?text=Envato"
+        },
+        "discount": "70% OFF",
+        "badges": [
+            "Verified"
+        ],
+        "successRate": "95%",
+        "expiry": "Ends in 7 days",
+        "code": "SAVE70",
+        "affiliateLink": "https://example.com/envato",
+        "isTop": true,
+        "status": "active",
+        "votesCount": 402,
+        "successPercentage": 90
+    }
+]
