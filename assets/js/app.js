@@ -1,7 +1,7 @@
 class App {
     static async init() {
         const path = window.location.pathname;
-        if (path.endsWith('review.html')) {
+        if (path.includes('review') || document.querySelector('.review-title')) {
             await this.initReviewPage();
         } else {
             await this.initHomePage();
@@ -346,7 +346,12 @@ class App {
     
         const urlParams = new URLSearchParams(window.location.search);
         let id = urlParams.get('id');
-        if (!id) id = 'lumafusion-pro';
+        
+        // Support clean URLs like /reviews/capcut-pro
+        if (!id && window.location.pathname.includes('/reviews/')) {
+            const parts = window.location.pathname.split('/').filter(Boolean);
+            id = parts[parts.length - 1]; 
+        }
 
         const review = await DataService.getReviewById(id);
         if (!review) {
