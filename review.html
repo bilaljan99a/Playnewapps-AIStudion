@@ -39,24 +39,19 @@
     <link rel="preload" as="style" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <!-- Structured Data (Schema.org) -->
-    
-    
-    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GJQLCWRKE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-2GJQLCWRKE');
     </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <!-- 1. Header (Shared) -->
+    <!-- Header (Shared) -->
     <header class="header">
         <div class="container header-inner">
             <a href="index.html" class="logo" aria-label="PlayNewApps Home">
@@ -91,18 +86,18 @@
         <!-- Main Article Area -->
         <main id="main-content" class="main-content">
             
-            <!-- 1. Breadcrumb Navigation -->
+            <!-- Breadcrumb Navigation -->
             <nav class="breadcrumbs" aria-label="Breadcrumb">
                 <ol>
                     <li><a href="index.html">Home</a></li>
                     <li><span class="separator">/</span></li>
                     <li><a href="/category.html?id=all">Reviews</a></li>
                     <li><span class="separator">/</span></li>
-                    <li aria-current="page" id="breadcrumb-current">...</li>
+                    <li aria-current="page" id="breadcrumb-current">Loading...</li>
                 </ol>
             </nav>
 
-            
+            <!-- Loading Skeleton -->
             <div id="review-loading-skeleton" class="skeleton-container" style="padding: 2rem; display: flex; flex-direction: column; gap: 1rem; width: 100%;">
                 <div class="skeleton" style="width: 120px; height: 120px; border-radius: 20px;"></div>
                 <div class="skeleton" style="width: 60%; height: 40px; margin-top: 1rem;"></div>
@@ -110,18 +105,17 @@
                 <div class="skeleton" style="width: 40%; height: 20px;"></div>
                 <div class="skeleton" style="width: 100%; height: 200px; margin-top: 2rem;"></div>
             </div>
+
+            <!-- Review Article (Hidden until data loads) -->
             <article class="review-article reveal" id="review-article" style="display: none;">
 
-                <!-- 2. Hero Section -->
+                <!-- Hero Section -->
                 <header class="review-hero">
                     <div class="app-icon-wrapper">
                         <img src="" alt="App Icon" class="app-icon" width="120" height="120">
                     </div>
                     <div class="hero-details">
-                        <div class="badges">
-                            <span class="badge verified-badge"><span class="material-icons-round" aria-hidden="true">verified</span> Verified Review</span>
-                            <span class="badge editor-choice"><span class="material-icons-round" aria-hidden="true">stars</span> Editor's Choice</span>
-                        </div>
+                        <div class="badges"></div>
                         <h1 class="review-title"></h1>
                         <p class="review-subtitle"></p>
                         
@@ -133,60 +127,48 @@
                     </div>
                 </header>
 
-                <!-- 4. Official Download Buttons -->
+                <!-- Official Download Buttons & Disclosure -->
                 <div class="affiliate-disclosure">
-        <p><span class="material-icons-round" aria-hidden="true">info</span> <strong>Affiliate Disclosure:</strong> We may earn a commission if you purchase through our links, at no extra cost to you. This helps support our reviews. <a href="/affiliate.html">Learn more</a>.</p>
-    </div>
-    <div id="affiliate-buttons-container" class="affiliate-buttons-container">
-        <!-- Loaded dynamically -->
-    </div>
+                    <p><span class="material-icons-round" aria-hidden="true">info</span> <strong>Affiliate Disclosure:</strong> We may earn a commission if you purchase through our links, at no extra cost to you. This helps support our reviews. <a href="/affiliate.html">Learn more</a>.</p>
+                </div>
+                <div id="affiliate-buttons-container" class="affiliate-buttons-container"></div>
 
                 <div class="two-column-layout">
-                    <!-- 9. Review Summary -->
+                    <!-- Main Column -->
                     <div class="main-column">
-                        <section id="editor-recommendation-box" class="editor-recommendation-box"></section>
-    <section class="review-section" id="dynamic-review-body">
-        <!-- Content injected dynamically via app.js -->
-    </section>
-                        <section id="related-guides-section" class="related-guides-section">
-        </section>
-        <div class="inline-cta-box" style="display:none;"></div>
-        <section class="review-section">
-</div>
-                    <!-- 3. Quick Information Table -->
+                        <section id="editor-recommendation-box" class="editor-recommendation-box" style="display: none;"></section>
+                        <section class="review-section" id="dynamic-review-body" style="display: none;"></section>
+                        <section id="related-guides-section" class="related-guides-section" style="display: none;"></section>
+                    </div>
+
+                    <!-- Side Column -->
                     <div class="side-column">
-                        <div id="trust-score-box" class="trust-score-box card"></div>
-    <div id="price-comparison-box" class="price-comparison-box card"></div>
-    <div class="quick-info-box card">
+                        <div id="trust-score-box" class="trust-score-box card" style="display: none;"></div>
+                        <div id="price-comparison-box" class="price-comparison-box card" style="display: none;"></div>
+                        <div class="quick-info-box card">
                             <h3>Quick Information</h3>
                             <table class="quick-info-table"><tbody></tbody></table>
                         </div>
                     </div>
                 </div>
 
-                <!-- 19. Affiliate Recommendation Box -->
+                <!-- Affiliate Recommendation Box -->
                 <div class="affiliate-box card" id="affiliate-box" style="display:none;"></div>
-                    <div class="coupon-action affiliate-box-action">
-                        <div class="code-reveal-wrapper" id="affiliate-code-wrapper" style="display:none;">
-                            <span class="hidden-code-mask" id="affiliate-box-mask"></span>
-                            <button class="btn show-code-btn" aria-label="Show Coupon Code and Copy">Show Code</button>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- 5. Screenshots Gallery -->
-                <section class="review-section">
+                <!-- Screenshots Gallery -->
+                <section class="review-section" id="screenshots-section" style="display: none;">
                     <h2>Screenshots</h2>
                     <div class="gallery-grid"></div>
                 </section>
 
-                <!-- 6. Video Review Section -->
-                <section class="review-section">
+                <!-- Video Review Section -->
+                <section class="review-section" id="video-section" style="display: none;">
                     <h2>Video Review</h2>
-                    <div class="video-container"></div></section>
+                    <div class="video-container"></div>
+                </section>
 
-                <!-- 8. Pros and Cons Cards -->
-                <section class="review-section">
+                <!-- Pros and Cons Cards -->
+                <section class="review-section" id="pros-cons-section">
                     <div class="pros-cons-grid">
                         <div class="card pros-card">
                             <h3><span class="material-icons-round text-success" aria-hidden="true">check_circle</span> Pros</h3>
@@ -199,47 +181,25 @@
                     </div>
                 </section>
 
-                <!-- 11. Rating Breakdown -->
-                <section class="review-section">
+                <!-- Rating Breakdown -->
+                <section class="review-section" id="rating-breakdown-section">
                     <h2>Rating Breakdown</h2>
-                    <div class="card rating-breakdown-box">
-                        <div class="rating-bar-row">
-                            <span class="rating-label">Ease of Use</span>
-                            <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
-                            <span class="rating-score">4.0</span>
-                        </div>
-                        <div class="rating-bar-row">
-                            <span class="rating-label">Features</span>
-                            <div class="progress-bar"><div class="progress-fill bg-success" style="width: 100%;"></div></div>
-                            <span class="rating-score">5.0</span>
-                        </div>
-                        <div class="rating-bar-row">
-                            <span class="rating-label">Design</span>
-                            <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
-                            <span class="rating-score">4.5</span>
-                        </div>
-                        <div class="rating-bar-row">
-                            <span class="rating-label">Performance</span>
-                            <div class="progress-bar"><div class="progress-fill bg-success" style="width: 96%;"></div></div>
-                            <span class="rating-score">4.8</span>
-                        </div>
-                        <div class="rating-bar-row">
-                            <span class="rating-label">Value for Money</span>
-                            <div class="progress-bar"><div class="progress-fill bg-success" style="width: 100%;"></div></div>
-                            <span class="rating-score">5.0</span>
-                        </div>
-                    </div>
+                    <div class="card rating-breakdown-box"></div>
                 </section>
 
-                <!-- 12. Alternatives / 13. Similar Apps -->
-                <section class="review-section">
+                <!-- FAQs Section -->
+                <section class="review-section" id="faq-section" style="display: none;">
+                    <h2>Frequently Asked Questions</h2>
+                    <div id="faq-container" class="faq-container"></div>
+                </section>
+
+                <!-- Related Reviews & Alternatives -->
+                <section class="review-section" id="related-reviews-section">
                     <h2>Related Reviews & Alternatives</h2>
-                    <div id="related-grid" class="grid similar-apps-grid">
-                        <!-- Loaded dynamically via app.js -->
-                    </div>
+                    <div id="related-grid" class="grid similar-apps-grid"></div>
                 </section>
 
-                <!-- 18. Comments Section Layout -->
+                <!-- Community Reviews & Discussion -->
                 <section class="review-section comments-section" id="comments">
                     <h2>Community Reviews & Discussion</h2>
                     
@@ -255,10 +215,11 @@
                         </div>
                     </form>
 
-                    <div class="comments-list"></div></section>
+                    <div class="comments-list"></div>
+                </section>
             </article>
             
-            <!-- 20. Sticky Sidebar -->
+            <!-- Sticky Sidebar -->
             <aside class="sidebar">
                 <div class="sticky-wrapper">
                     <!-- Related Articles -->
@@ -266,23 +227,22 @@
                         <h3 class="widget-title">Related Articles</h3>
                         <ul class="widget-article-list">
                             <li>
-                                <a href="/category.html?id=video-editors">Top 5 Video Editors for Android in 2024</a>
+                                <a href="/category.html?id=video-editors">Top 5 Mobile Video Editors in 2024</a>
                             </li>
                             <li>
-                                <a href="/category.html?id=video-editors">How to edit 4K video on iPad</a>
+                                <a href="/category.html?id=all">Comprehensive App & Software Buying Guides</a>
                             </li>
-                            
                         </ul>
                     </div>
 
                     <!-- Trending Deals -->
                     <div class="widget card">
                         <h3 class="widget-title">Top App Deals</h3>
-                        <div class="widget-deal">
-                            <div class="deal-badge">60% OFF</div>
-                            <h4>NordVPN Premium</h4>
-                            <p>Secure your connection today.</p>
-                            <a href="/coupon.html" class="btn btn-primary full-width get-deal-btn">Get Deal</a>
+                        <div class="widget-deal" id="sidebar-top-deal">
+                            <div class="deal-badge">HOT DEAL</div>
+                            <h4>Exclusive Software Offers</h4>
+                            <p>Save up to 65% on premier software today.</p>
+                            <a href="/coupon.html" class="btn btn-primary full-width get-deal-btn">Get Deals</a>
                         </div>
                     </div>
 
@@ -300,7 +260,7 @@
         </main>
     </div>
 
-    <!-- 5. Lightbox Modal -->
+    <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image Gallery">
         <button class="lightbox-close" aria-label="Close Gallery"><span class="material-icons-round">close</span></button>
         <div class="lightbox-content">

@@ -227,97 +227,123 @@ class App {
 
     
     static async setupAffiliateFeatures(review) {
-        
+        if (!review) return;
+
         // -- Affiliate System Injections --
         
         // 1. Affiliate Buttons
         const affiliateContainer = document.getElementById('affiliate-buttons-container');
-        if (affiliateContainer && review.affiliateLinks && review.affiliateLinks.length > 0) {
-            affiliateContainer.innerHTML = review.affiliateLinks.map(link => `
-                <a href="${link.url}" target="_blank" rel="noopener sponsored" class="btn ${link.isPrimary ? 'btn-primary cta-pulse' : 'btn-outline'} affiliate-btn">
-                    ${link.icon ? `<span class="material-icons-round">${link.icon}</span>` : ''} ${link.label}
-                </a>
-            `).join('');
+        if (affiliateContainer) {
+            if (review.affiliateLinks && review.affiliateLinks.length > 0) {
+                affiliateContainer.style.display = 'flex';
+                affiliateContainer.innerHTML = review.affiliateLinks.map(link => `
+                    <a href="${link.url}" target="_blank" rel="noopener sponsored" class="btn ${link.isPrimary ? 'btn-primary cta-pulse' : 'btn-outline'} affiliate-btn">
+                        ${link.icon ? `<span class="material-icons-round">${link.icon}</span>` : ''} ${link.label}
+                    </a>
+                `).join('');
+            } else {
+                affiliateContainer.style.display = 'none';
+            }
         }
 
         // 2. Trust Score
         const trustBox = document.getElementById('trust-score-box');
-        if (trustBox && review.trustScore) {
-            trustBox.innerHTML = `
-                <div class="trust-score-header">
-                    <span class="material-icons-round text-secondary">verified_user</span>
-                    <h3>Trust Score</h3>
-                </div>
-                <div class="trust-score-value">${review.trustScore}<span class="trust-score-max">/100</span></div>
-                <p class="trust-score-desc">Based on expert testing, user reviews, and security audits.</p>
-                ${review.communityRating ? `
-                <div class="community-rating">
-                    <span>Community Rating:</span>
-                    <div class="rating">
-                        ${Components.getRatingStars(review.communityRating)}
+        if (trustBox) {
+            if (review.trustScore) {
+                trustBox.style.display = 'block';
+                trustBox.innerHTML = `
+                    <div class="trust-score-header">
+                        <span class="material-icons-round text-secondary">verified_user</span>
+                        <h3>Trust Score</h3>
                     </div>
-                    <strong>${review.communityRating}</strong>
-                </div>` : ''}
-            `;
-        } else if (trustBox) { trustBox.style.display = 'none'; }
+                    <div class="trust-score-value">${review.trustScore}<span class="trust-score-max">/100</span></div>
+                    <p class="trust-score-desc">Based on expert testing, user reviews, and security audits.</p>
+                    ${review.communityRating ? `
+                    <div class="community-rating">
+                        <span>Community Rating:</span>
+                        <div class="rating">
+                            ${Components.getRatingStars(review.communityRating)}
+                        </div>
+                        <strong>${review.communityRating}</strong>
+                    </div>` : ''}
+                `;
+            } else {
+                trustBox.style.display = 'none';
+            }
+        }
 
         // 3. Price Comparison
         const priceBox = document.getElementById('price-comparison-box');
-        if (priceBox && review.priceComparison && review.priceComparison.length > 0) {
-            priceBox.innerHTML = `
-                <h3>Best Prices Today</h3>
-                <ul class="price-comparison-list">
-                    ${review.priceComparison.map(p => `
-                        <li class="price-comparison-item ${p.isBest ? 'best-deal-highlight' : ''}">
-                            <div class="price-store-info">
-                                <span class="store-name">${p.store}</span>
-                                ${p.badge ? `<span class="deal-badge">${p.badge}</span>` : ''}
-                                ${p.isBest ? `<span class="best-deal-badge">Best Deal</span>` : ''}
-                            </div>
-                            <div class="price-action">
-                                <span class="price-amount">${p.price}</span>
-                                <a href="${p.url}" target="_blank" rel="noopener sponsored" class="btn btn-sm ${p.isBest ? 'btn-primary' : 'btn-outline'}">View</a>
-                            </div>
-                        </li>
-                    `).join('')}
-                </ul>
-            `;
-        } else if (priceBox) { priceBox.style.display = 'none'; }
+        if (priceBox) {
+            if (review.priceComparison && review.priceComparison.length > 0) {
+                priceBox.style.display = 'block';
+                priceBox.innerHTML = `
+                    <h3>Best Prices Today</h3>
+                    <ul class="price-comparison-list">
+                        ${review.priceComparison.map(p => `
+                            <li class="price-comparison-item ${p.isBest ? 'best-deal-highlight' : ''}">
+                                <div class="price-store-info">
+                                    <span class="store-name">${p.store}</span>
+                                    ${p.badge ? `<span class="deal-badge">${p.badge}</span>` : ''}
+                                    ${p.isBest ? `<span class="best-deal-badge">Best Deal</span>` : ''}
+                                </div>
+                                <div class="price-action">
+                                    <span class="price-amount">${p.price}</span>
+                                    <a href="${p.url}" target="_blank" rel="noopener sponsored" class="btn btn-sm ${p.isBest ? 'btn-primary' : 'btn-outline'}">View</a>
+                                </div>
+                            </li>
+                        `).join('')}
+                    </ul>
+                `;
+            } else {
+                priceBox.style.display = 'none';
+            }
+        }
 
         // 4. Editor Recommendation
         const editorBox = document.getElementById('editor-recommendation-box');
-        if (editorBox && review.editorRecommendation) {
-            editorBox.innerHTML = `
-                <div class="editor-rec-content">
-                    <div class="editor-rec-header">
-                        <span class="material-icons-round">thumb_up</span>
-                        <h3>Editor's Take</h3>
+        if (editorBox) {
+            if (review.editorRecommendation) {
+                editorBox.style.display = 'block';
+                editorBox.innerHTML = `
+                    <div class="editor-rec-content">
+                        <div class="editor-rec-header">
+                            <span class="material-icons-round">thumb_up</span>
+                            <h3>Editor's Take</h3>
+                        </div>
+                        <p>${review.editorRecommendation}</p>
                     </div>
-                    <p>${review.editorRecommendation}</p>
-                </div>
-            `;
-        } else if (editorBox) { editorBox.style.display = 'none'; }
+                `;
+            } else {
+                editorBox.style.display = 'none';
+            }
+        }
 
         // 5. Related Guides
         const guidesBox = document.getElementById('related-guides-section');
-        if (guidesBox && review.relatedGuides && review.relatedGuides.length > 0) {
-            guidesBox.innerHTML = `
-                <h2>Related Buying Guides</h2>
-                <ul class="related-guides-list">
-                    ${review.relatedGuides.map(g => `
-                        <li>
-                            <a href="${g.url}">
-                                <span class="material-icons-round">menu_book</span> ${g.title}
-                            </a>
-                        </li>
-                    `).join('')}
-                </ul>
-            `;
-        } else if (guidesBox) { guidesBox.style.display = 'none'; }
+        if (guidesBox) {
+            if (review.relatedGuides && review.relatedGuides.length > 0) {
+                guidesBox.style.display = 'block';
+                guidesBox.innerHTML = `
+                    <h2>Related Buying Guides</h2>
+                    <ul class="related-guides-list">
+                        ${review.relatedGuides.map(g => `
+                            <li>
+                                <a href="${g.url}">
+                                    <span class="material-icons-round">menu_book</span> ${g.title}
+                                </a>
+                            </li>
+                        `).join('')}
+                    </ul>
+                `;
+            } else {
+                guidesBox.style.display = 'none';
+            }
+        }
         
         // 6. Mobile Sticky CTA
         const stickyCta = document.getElementById('sticky-mobile-cta');
-        if (stickyCta && review.affiliateLinks) {
+        if (stickyCta && review.affiliateLinks && review.affiliateLinks.length > 0) {
             const primaryLink = review.affiliateLinks.find(l => l.isPrimary) || review.affiliateLinks[0];
             if (primaryLink) {
                 stickyCta.innerHTML = `
@@ -339,11 +365,9 @@ class App {
                 }, {passive: true});
             }
         }
-
     }
 
     static async initReviewPage() {
-    
         const urlParams = new URLSearchParams(window.location.search);
         let id = urlParams.get('id');
         
@@ -353,16 +377,28 @@ class App {
             id = parts[parts.length - 1]; 
         }
 
-        const review = await DataService.getReviewById(id);
+        const allReviews = await DataService.getAllReviews();
+        if (!id && allReviews.length > 0) {
+            id = allReviews[0].id;
+        }
+
+        let review = allReviews.find(r => r.id === id);
+        if (!review && id) {
+            review = allReviews.find(r => r.id.toLowerCase() === id.toLowerCase());
+        }
+
         if (!review) {
-            document.querySelector('.main-content').innerHTML = '<h2>Review not found</h2>';
+            const skeleton = document.getElementById('review-loading-skeleton');
+            if (skeleton) skeleton.style.display = 'none';
+            const mainContent = document.querySelector('.main-content');
+            if (mainContent) {
+                mainContent.innerHTML = '<div class="card" style="padding: 2rem; text-align: center;"><h2>Review Not Found</h2><p style="margin: 1rem 0;">The requested review could not be found or has been moved.</p><a href="index.html" class="btn btn-primary">Return to Home</a></div>';
+            }
             return;
         }
 
-        
+        // 1. Update Title & SEO Metadata
         document.title = `${review.title} Review | PlayNewApps`;
-        
-        // --- SEO & Metadata Updates ---
         const canonicalUrl = `https://playnewapps.store/review.html?id=${review.id}`;
         
         const updateMeta = (selector, attr, content) => {
@@ -370,17 +406,17 @@ class App {
             if (el) el.setAttribute(attr, content);
         };
 
-        updateMeta('meta[name="description"]', 'content', review.description);
+        updateMeta('meta[name="description"]', 'content', review.description || '');
         updateMeta('#canonical-url', 'href', canonicalUrl);
         updateMeta('#og-title', 'content', `${review.title} Review | PlayNewApps`);
-        updateMeta('#og-description', 'content', review.description);
+        updateMeta('#og-description', 'content', review.description || '');
         updateMeta('#og-url', 'content', canonicalUrl);
-        updateMeta('#og-image', 'content', `https://playnewapps.store${review.icon}`);
+        updateMeta('#og-image', 'content', review.icon ? `https://playnewapps.store${review.icon}` : '');
         updateMeta('#twitter-title', 'content', `${review.title} Review (2024)`);
-        updateMeta('#twitter-description', 'content', review.description);
-        updateMeta('#twitter-image', 'content', `https://playnewapps.store${review.icon}`);
+        updateMeta('#twitter-description', 'content', review.description || '');
+        updateMeta('#twitter-image', 'content', review.icon ? `https://playnewapps.store${review.icon}` : '');
         
-        // --- Schema JSON-LD Injection ---
+        // 2. Schema JSON-LD Injection
         const schemaReview = {
             "@context": "https://schema.org",
             "@type": "Review",
@@ -388,11 +424,11 @@ class App {
                 "@type": "SoftwareApplication",
                 "name": review.title,
                 "applicationCategory": review.categoryId || "MultimediaApplication",
-                "image": `https://playnewapps.store${review.icon}`
+                "image": review.icon ? `https://playnewapps.store${review.icon}` : ''
             },
             "reviewRating": {
                 "@type": "Rating",
-                "ratingValue": review.rating.toString(),
+                "ratingValue": (review.rating || 5).toString(),
                 "bestRating": "5"
             },
             "author": {
@@ -405,88 +441,185 @@ class App {
         scriptSchema.text = JSON.stringify(schemaReview);
         document.head.appendChild(scriptSchema);
         
-        // Update Breadcrumb
+        // 3. Update Breadcrumb
         const breadcrumbEl = document.getElementById('breadcrumb-current');
         if (breadcrumbEl) breadcrumbEl.textContent = review.title;
 
-        
-        // Update DOM elements
+        // 4. Hero Section Updates
         const setText = (sel, text) => { const el = document.querySelector(sel); if(el) el.textContent = text; };
         const setHtml = (sel, html) => { const el = document.querySelector(sel); if(el) el.innerHTML = html; };
-        const setSrc = (sel, src) => { const el = document.querySelector(sel); if(el) el.src = src; };
+        const setSrc = (sel, src, alt) => {
+            const el = document.querySelector(sel);
+            if(el) {
+                el.src = src || '';
+                if (alt) el.alt = alt;
+            }
+        };
 
         setText('.review-title', `${review.title} Review`);
-        setText('.review-subtitle', review.description);
-        setSrc('.app-icon', review.icon);
+        setText('.review-subtitle', review.description || '');
+        setSrc('.app-icon', review.icon, `${review.title} Icon`);
         
-        const ratingHtml = Components.getRatingStars(review.rating) + `<span class="rating-text">${review.rating} / 5.0 Overall</span>`;
-        setHtml('.review-rating', ratingHtml);
-
-        if (review.updatedAt) {
-            setHtml('.update-date', `<span class="material-icons-round">update</span> Updated ${new Date(review.updatedAt).toLocaleDateString('en-US')}`);
+        // Badges
+        const badgesContainer = document.querySelector('.badges');
+        if (badgesContainer) {
+            if (review.badges && review.badges.length > 0) {
+                badgesContainer.style.display = 'flex';
+                badgesContainer.innerHTML = review.badges.map(b => {
+                    const isVerified = b.toLowerCase().includes('verified');
+                    const isEditor = b.toLowerCase().includes('editor');
+                    const icon = isVerified ? 'verified' : (isEditor ? 'stars' : 'local_fire_department');
+                    return `<span class="badge ${isVerified ? 'verified-badge' : 'editor-choice'}"><span class="material-icons-round" aria-hidden="true">${icon}</span> ${b}</span>`;
+                }).join(' ');
+            } else {
+                badgesContainer.style.display = 'none';
+            }
         }
 
+        // Rating
+        const ratingHtml = Components.getRatingStars(review.rating || 5) + `<span class="rating-text">${review.rating || 5.0} / 5.0 Overall</span>`;
+        setHtml('.review-rating', ratingHtml);
+
+        // Update Date
+        const dateEl = document.querySelector('.update-date');
+        if (dateEl) {
+            if (review.updatedAt) {
+                dateEl.style.display = 'inline-flex';
+                dateEl.innerHTML = `<span class="material-icons-round">update</span> Updated ${new Date(review.updatedAt).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'})}`;
+            } else {
+                dateEl.style.display = 'none';
+            }
+        }
+
+        // Tags
+        const tagsBox = document.querySelector('.tags-box');
+        if (tagsBox) {
+            if (review.tags && review.tags.length > 0) {
+                tagsBox.style.display = 'flex';
+                tagsBox.innerHTML = review.tags.map(t => `<span class="tag">#${t}</span>`).join(' ');
+            } else {
+                tagsBox.style.display = 'none';
+            }
+        }
+
+        // Quick Info Table
         const tbody = document.querySelector('.quick-info-table tbody');
         if (tbody) {
             tbody.innerHTML = `
-                <tr><th>Developer</th><td>${review.developer || 'Unknown'}</td></tr>
+                <tr><th>Developer</th><td>${review.developer || 'N/A'}</td></tr>
                 <tr><th>Category</th><td>${review.categoryId || 'App'}</td></tr>
                 <tr><th>Version</th><td>${review.version || 'Varies'}</td></tr>
                 <tr><th>Size</th><td>${review.size || 'Varies'}</td></tr>
-                <tr><th>Platforms</th><td>${(review.platforms||[]).join(', ') || 'N/A'}</td></tr>
+                <tr><th>Platforms</th><td>${(review.platforms||[]).join(', ') || 'All Platforms'}</td></tr>
                 <tr><th>License</th><td>${review.license || 'Free / Paid'}</td></tr>
             `;
         }
 
-        const tagsBox = document.querySelector('.tags-box');
-        if (tagsBox && review.tags) {
-            tagsBox.innerHTML = review.tags.map(t => `<span class="tag">#${t}</span>`).join(' ');
+        // 5. Dynamic Review Content Body
+        const dynamicBody = document.getElementById('dynamic-review-body');
+        if (dynamicBody) {
+            if (review.contentHtml) {
+                dynamicBody.style.display = 'block';
+                dynamicBody.innerHTML = review.contentHtml;
+            } else if (review.summary) {
+                dynamicBody.style.display = 'block';
+                dynamicBody.innerHTML = `
+                    <h2>In-Depth Review & Overview</h2>
+                    <p class="lead-text">${review.summary}</p>
+                `;
+            } else {
+                dynamicBody.style.display = 'none';
+            }
         }
 
-        const leadText = document.querySelector('.lead-text');
-        if (leadText && review.summary) {
-            leadText.textContent = review.summary;
-        }
-
+        // 6. Pros and Cons Section
+        const prosConsSection = document.getElementById('pros-cons-section');
         const prosList = document.querySelector('.pros-card .feature-list');
-        if (prosList && review.pros) {
-            prosList.innerHTML = review.pros.map(p => `<li>${p}</li>`).join('');
-        }
         const consList = document.querySelector('.cons-card .feature-list');
-        if (consList && review.cons) {
-            consList.innerHTML = review.cons.map(c => `<li>${c}</li>`).join('');
-        }
-        
-        const galleryGrid = document.querySelector('.gallery-grid');
-        if (galleryGrid && review.screenshots) {
-            galleryGrid.innerHTML = review.screenshots.map(s => `
-                <picture>
-                    <source srcset="${s.thumbnail}" type="image/webp">
-                    <img src="${s.url}" alt="${s.alt}" class="gallery-img lightbox-trigger" loading="lazy" width="800" height="600" tabindex="0">
-                </picture>
-            `).join('');
-            
-            setTimeout(() => {
-                const lightbox = document.getElementById('lightbox');
-                const lightboxImg = document.getElementById('lightbox-img');
-                const triggers = document.querySelectorAll('.lightbox-trigger');
-                triggers.forEach(img => {
-                    img.addEventListener('click', () => {
-                        lightboxImg.setAttribute('src', img.getAttribute('src'));
-                        lightbox.classList.add('active');
-                        lightbox.setAttribute('aria-hidden', 'false');
-                        document.body.style.overflow = 'hidden';
-                    });
-                });
-            }, 100);
+        const hasPros = review.pros && review.pros.length > 0;
+        const hasCons = review.cons && review.cons.length > 0;
+        if (hasPros || hasCons) {
+            if (prosConsSection) prosConsSection.style.display = 'block';
+            if (prosList) prosList.innerHTML = hasPros ? review.pros.map(p => `<li>${p}</li>`).join('') : '<li>No major pros listed</li>';
+            if (consList) consList.innerHTML = hasCons ? review.cons.map(c => `<li>${c}</li>`).join('') : '<li>No major cons listed</li>';
+        } else if (prosConsSection) {
+            prosConsSection.style.display = 'none';
         }
 
+        // 7. Screenshots Section
+        const screenshotsSection = document.getElementById('screenshots-section');
+        const galleryGrid = document.querySelector('.gallery-grid');
+        if (review.screenshots && review.screenshots.length > 0) {
+            if (screenshotsSection) screenshotsSection.style.display = 'block';
+            if (galleryGrid) {
+                galleryGrid.innerHTML = review.screenshots.map(s => `
+                    <picture>
+                        <source srcset="${s.thumbnail || s.url}" type="image/webp">
+                        <img src="${s.url}" alt="${s.alt || review.title + ' Screenshot'}" class="gallery-img lightbox-trigger" loading="lazy" width="800" height="600" tabindex="0">
+                    </picture>
+                `).join('');
+                
+                setTimeout(() => {
+                    const lightbox = document.getElementById('lightbox');
+                    const lightboxImg = document.getElementById('lightbox-img');
+                    const triggers = document.querySelectorAll('.lightbox-trigger');
+                    triggers.forEach(img => {
+                        img.addEventListener('click', () => {
+                            lightboxImg.setAttribute('src', img.getAttribute('src'));
+                            lightbox.classList.add('active');
+                            lightbox.setAttribute('aria-hidden', 'false');
+                            document.body.style.overflow = 'hidden';
+                        });
+                    });
+                }, 100);
+            }
+        } else if (screenshotsSection) {
+            screenshotsSection.style.display = 'none';
+        }
+
+        // 8. Video Review Section
+        const videoSection = document.getElementById('video-section');
+        const videoContainer = document.querySelector('.video-container');
+        if (review.video && (review.video.thumbnail || review.video.embedUrl)) {
+            if (videoSection) videoSection.style.display = 'block';
+            if (videoContainer) {
+                if (review.video.embedUrl) {
+                    videoContainer.innerHTML = `<iframe src="${review.video.embedUrl}" title="${review.title} Video Review" frameborder="0" allowfullscreen></iframe>`;
+                } else {
+                    videoContainer.innerHTML = `
+                        <div class="video-preview-wrapper card">
+                            <img src="${review.video.thumbnail}" alt="${review.title} Video Preview" class="video-thumbnail">
+                            <div class="video-play-overlay">
+                                <span class="material-icons-round play-icon">play_circle_filled</span>
+                                <span>Watch Video Review</span>
+                            </div>
+                        </div>`;
+                }
+            }
+        } else if (videoSection) {
+            videoSection.style.display = 'none';
+        }
+
+        // 9. Rating Breakdown Section
+        const breakdownSection = document.getElementById('rating-breakdown-section');
         const breakdownBox = document.querySelector('.rating-breakdown-box');
-        if (breakdownBox && review.ratingBreakdown) {
-            const rb = review.ratingBreakdown;
+        let rb = review.ratingBreakdown;
+        if (!rb && review.rating) {
+            const base = review.rating;
+            rb = {
+                easeOfUse: Math.min(5, Math.max(3.5, Number((base * 0.95).toFixed(1)))),
+                features: Math.min(5, Math.max(3.8, Number((base * 1.02).toFixed(1)))),
+                design: Math.min(5, Math.max(3.7, Number((base * 0.98).toFixed(1)))),
+                performance: Math.min(5, Math.max(3.9, Number((base * 1.01).toFixed(1)))),
+                value: Math.min(5, Math.max(3.5, Number((base * 0.96).toFixed(1))))
+            };
+        }
+
+        if (breakdownBox && rb) {
+            if (breakdownSection) breakdownSection.style.display = 'block';
             breakdownBox.innerHTML = Object.keys(rb).map(key => {
                 const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-                const score = rb[key];
+                const score = Number(rb[key]);
                 const pct = (score / 5) * 100;
                 return `
                 <div class="rating-bar-row">
@@ -495,24 +628,38 @@ class App {
                     <span class="rating-score">${score.toFixed(1)}</span>
                 </div>`;
             }).join('');
+        } else if (breakdownSection) {
+            breakdownSection.style.display = 'none';
         }
 
-        const dynamicBody = document.getElementById('dynamic-review-body');
-        if (dynamicBody && review.contentHtml) {
-            dynamicBody.innerHTML = review.contentHtml;
-        } else if (dynamicBody) {
-            dynamicBody.style.display = 'none';
+        // 10. FAQs Section
+        const faqSection = document.getElementById('faq-section');
+        const faqContainer = document.getElementById('faq-container');
+        if (review.faqs && review.faqs.length > 0) {
+            if (faqSection) faqSection.style.display = 'block';
+            if (faqContainer) {
+                faqContainer.innerHTML = review.faqs.map(faq => `
+                    <div class="faq-item card">
+                        <h4 class="faq-question">${faq.question}</h4>
+                        <div class="faq-answer"><p>${faq.answer}</p></div>
+                    </div>
+                `).join('');
+            }
+        } else if (faqSection) {
+            faqSection.style.display = 'none';
         }
 
-        
-        // Hide skeleton and show content
+        // 11. Affiliate & Deal Setup
+        await this.setupAffiliateFeatures(review);
+
+        // 12. Render Related Content
+        await this.renderRelatedContent(review);
+
+        // 13. Hide Skeleton and Show Article
         const skeleton = document.getElementById('review-loading-skeleton');
         const article = document.getElementById('review-article');
         if (skeleton) skeleton.style.display = 'none';
         if (article) article.style.display = 'block';
-
-        this.renderRelatedContent(review);
-
     }
 
     static async renderRelatedContent(currentReview) {
@@ -530,119 +677,6 @@ class App {
         if (relatedGrid) {
             this.renderReviews(related.slice(0, 3), relatedGrid);
         }
-
-        // -- Affiliate System Injections --
-        
-        // 1. Affiliate Buttons
-        const affiliateContainer = document.getElementById('affiliate-buttons-container');
-        if (affiliateContainer && review.affiliateLinks && review.affiliateLinks.length > 0) {
-            affiliateContainer.innerHTML = review.affiliateLinks.map(link => `
-                <a href="${link.url}" target="_blank" rel="noopener sponsored" class="btn ${link.isPrimary ? 'btn-primary cta-pulse' : 'btn-outline'} affiliate-btn">
-                    ${link.icon ? `<span class="material-icons-round">${link.icon}</span>` : ''} ${link.label}
-                </a>
-            `).join('');
-        }
-
-        // 2. Trust Score
-        const trustBox = document.getElementById('trust-score-box');
-        if (trustBox && review.trustScore) {
-            trustBox.innerHTML = `
-                <div class="trust-score-header">
-                    <span class="material-icons-round text-secondary">verified_user</span>
-                    <h3>Trust Score</h3>
-                </div>
-                <div class="trust-score-value">${review.trustScore}<span class="trust-score-max">/100</span></div>
-                <p class="trust-score-desc">Based on expert testing, user reviews, and security audits.</p>
-                ${review.communityRating ? `
-                <div class="community-rating">
-                    <span>Community Rating:</span>
-                    <div class="rating">
-                        ${Components.getRatingStars(review.communityRating)}
-                    </div>
-                    <strong>${review.communityRating}</strong>
-                </div>` : ''}
-            `;
-        } else if (trustBox) { trustBox.style.display = 'none'; }
-
-        // 3. Price Comparison
-        const priceBox = document.getElementById('price-comparison-box');
-        if (priceBox && review.priceComparison && review.priceComparison.length > 0) {
-            priceBox.innerHTML = `
-                <h3>Best Prices Today</h3>
-                <ul class="price-comparison-list">
-                    ${review.priceComparison.map(p => `
-                        <li class="price-comparison-item ${p.isBest ? 'best-deal-highlight' : ''}">
-                            <div class="price-store-info">
-                                <span class="store-name">${p.store}</span>
-                                ${p.badge ? `<span class="deal-badge">${p.badge}</span>` : ''}
-                                ${p.isBest ? `<span class="best-deal-badge">Best Deal</span>` : ''}
-                            </div>
-                            <div class="price-action">
-                                <span class="price-amount">${p.price}</span>
-                                <a href="${p.url}" target="_blank" rel="noopener sponsored" class="btn btn-sm ${p.isBest ? 'btn-primary' : 'btn-outline'}">View</a>
-                            </div>
-                        </li>
-                    `).join('')}
-                </ul>
-            `;
-        } else if (priceBox) { priceBox.style.display = 'none'; }
-
-        // 4. Editor Recommendation
-        const editorBox = document.getElementById('editor-recommendation-box');
-        if (editorBox && review.editorRecommendation) {
-            editorBox.innerHTML = `
-                <div class="editor-rec-content">
-                    <div class="editor-rec-header">
-                        <span class="material-icons-round">thumb_up</span>
-                        <h3>Editor's Take</h3>
-                    </div>
-                    <p>${review.editorRecommendation}</p>
-                </div>
-            `;
-        } else if (editorBox) { editorBox.style.display = 'none'; }
-
-        // 5. Related Guides
-        const guidesBox = document.getElementById('related-guides-section');
-        if (guidesBox && review.relatedGuides && review.relatedGuides.length > 0) {
-            guidesBox.innerHTML = `
-                <h2>Related Buying Guides</h2>
-                <ul class="related-guides-list">
-                    ${review.relatedGuides.map(g => `
-                        <li>
-                            <a href="${g.url}">
-                                <span class="material-icons-round">menu_book</span> ${g.title}
-                            </a>
-                        </li>
-                    `).join('')}
-                </ul>
-            `;
-        } else if (guidesBox) { guidesBox.style.display = 'none'; }
-        
-        // 6. Mobile Sticky CTA
-        const stickyCta = document.getElementById('sticky-mobile-cta');
-        if (stickyCta && review.affiliateLinks) {
-            const primaryLink = review.affiliateLinks.find(l => l.isPrimary) || review.affiliateLinks[0];
-            if (primaryLink) {
-                stickyCta.innerHTML = `
-                    <div class="sticky-cta-content">
-                        <div class="sticky-cta-info">
-                            <strong>${review.title}</strong>
-                            <span>${primaryLink.label}</span>
-                        </div>
-                        <a href="${primaryLink.url}" target="_blank" rel="noopener sponsored" class="btn btn-primary cta-pulse">Get Deal</a>
-                    </div>
-                `;
-                // Show on scroll
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 300) {
-                        stickyCta.classList.add('visible');
-                    } else {
-                        stickyCta.classList.remove('visible');
-                    }
-                }, {passive: true});
-            }
-        }
-
     }
 }
 
@@ -667,7 +701,6 @@ App.init = async function() {
         return; // oldInit handles search
     }
     
-    await this.setupAffiliateFeatures(review);
     this.initSearch();
 };
 
