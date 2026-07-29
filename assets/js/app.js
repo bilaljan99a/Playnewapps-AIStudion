@@ -34,7 +34,7 @@ class App {
             if (suggestionsBox) {
                 if (results.length > 0) {
                     suggestionsBox.innerHTML = results.map(r => `
-                        <a href="review.html?id=${r.id}" class="suggestion-item">
+                        <a href="/reviews/${r.id}" class="suggestion-item">
                             <img src="${r.icon}" alt="${r.title} icon" width="30" height="30">
                             <span>${r.title}</span>
                         </a>
@@ -398,8 +398,8 @@ class App {
         }
 
         // 1. Update Title & SEO Metadata
-        document.title = `${review.title} Review | PlayNewApps`;
-        const canonicalUrl = `https://playnewapps.store/review.html?id=${review.id}`;
+        document.title = `${review.title} Review 2026 | PlayNewApps`;
+      const canonicalUrl = `https://playnewapps.store/reviews/${review.id}`;
         
         const updateMeta = (selector, attr, content) => {
             const el = document.querySelector(selector);
